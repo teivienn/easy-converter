@@ -55,7 +55,15 @@ export const Valutes = () => {
       <SearchInput value={search} setValue={setSearch} />
 
       <FlatList
+        maxToRenderPerBatch={10}
+        windowSize={5}
+        initialNumToRender={20}
         style={styles.scroll}
+        getItemLayout={(_, index) => ({
+          length: 80,
+          offset: 80 * index,
+          index,
+        })}
         contentContainerStyle={styles.container}
         keyExtractor={keyExtractor}
         data={filteredData}
