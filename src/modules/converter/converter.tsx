@@ -11,11 +11,14 @@ import { useStore } from '../../lib/store';
 import { Currencies } from '../../types';
 import { useReanimatedKeyboardAnimation } from 'react-native-keyboard-controller';
 import Animated, { useAnimatedStyle } from 'react-native-reanimated';
+import { EmptyList } from './ui/empty-list';
+import { useUpdateRates } from '../../hooks/useUpdateRates';
 
 export const Converter = () => {
   const { setOptions } = useNavigation();
   const { height } = useReanimatedKeyboardAnimation();
   const { styles } = useStyles(stylesheet);
+  const { loading, refetch } = useUpdateRates();
 
   console.log(height.value, 'height');
 
@@ -44,7 +47,10 @@ export const Converter = () => {
   return (
     <View style={styles.view}>
       <FlatList
+        refreshing={loading}
+        onRefresh={refetch}
         style={styles.scroll}
+        ListEmptyComponent={<EmptyList />}
         contentContainerStyle={styles.container}
         data={data}
         renderItem={({ item }) => (
