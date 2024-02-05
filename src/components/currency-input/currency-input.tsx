@@ -3,7 +3,7 @@ import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
 import Input from 'react-native-currency-input';
 import { Currencies } from '../../types';
-import { useStore } from '../../lib/store';
+import { useAllRates, useStore } from '../../lib/store';
 
 type CurrencyInputProps = {
   Icon: JSX.Element;
@@ -12,11 +12,8 @@ type CurrencyInputProps = {
 
 export const CurrencyInput = ({ Icon, name }: CurrencyInputProps) => {
   const { styles, theme } = useStyles(stylesheet);
-  const [main, setMain, rate] = useStore((store) => [
-    store.main,
-    store.setMain,
-    store.rates[name],
-  ]);
+  const [main, setMain] = useStore((store) => [store.main, store.setMain]);
+  const rate = useAllRates((store) => store.rates?.[name].value) || 1;
 
   return (
     <View style={styles.container}>

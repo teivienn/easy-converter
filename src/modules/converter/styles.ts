@@ -5,10 +5,14 @@ export const stylesheet = createStyleSheet((theme) => ({
     gap: 10,
     paddingHorizontal: 16,
     flexGrow: 1,
+    paddingBottom: 30,
   },
   scroll: {
-    backgroundColor: theme.colors.secondary,
     paddingTop: 16,
     flex: 1,
+  },
+  view: {
+    flex: 1,
+    backgroundColor: theme.colors.secondary,
   },
 }));

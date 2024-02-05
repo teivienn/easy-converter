@@ -1,26 +1,37 @@
 import { create } from 'zustand';
-import { Rates } from './api/api.types';
+import { RatesDTO } from './api/api.types';
+import { Currencies } from '../types';
 
 type Store = {
-  rates: Rates;
+  rates: Array<keyof typeof Currencies>;
   main: number;
 };
 
 type Actions = {
-  setRates: (rates: Rates) => void;
+  setRate: (rate: Currencies) => void;
   setMain: (value: number) => void;
 };
 
 export const useStore = create<Store & Actions>((set) => ({
-  rates: {
-    BYN: 1,
-    RUB: 1,
-    USD: 1,
-    EUR: 1,
-    PLN: 1,
-    CNY: 1,
-  },
+  rates: [],
   main: 1,
-  setRates: (rates) => set({ rates }),
+  setRate: (value) =>
+    set(({ rates }) => {
+      if (!rates.includes(value)) {
+        return { rates: [...rates, value] };
+      } else {
+        return { rates: rates.filter((rate) => rate !== value) };
+      }
+    }),
   setMain: (main) => set({ main }),
+}));
+
+type AllRatesStore = {
+  rates: RatesDTO | null;
+  setRates: (rates: RatesDTO) => void;
+};
+
+export const useAllRates = create<AllRatesStore>((set) => ({
+  rates: null,
+  setRates: (rates) => set({ rates }),
 }));

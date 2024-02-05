@@ -1,19 +1,23 @@
 import config from 'react-native-config';
-import { Rates, CurrencyDTO } from './api.types';
+import { RatesDTO, CurrencyDTO } from './api.types';
 
-export const getRates = async (): Promise<Rates> => {
+export const getRates = async (): Promise<RatesDTO> => {
   const response = await fetch(config.API_URL!);
   const data: CurrencyDTO = await response.json();
 
-  const rates: Record<string, number> = {
-    RUB: 1,
+  const rates: Record<string, { value: number; name: string }> = {
+    RUB: {
+      value: 1,
+      name: 'Российский рубль',
+    },
   };
 
   for (const [key, value] of Object.entries(data.Valute)) {
-    rates[key] = value.Value;
+    rates[key] = {
+      value: value.Value,
+      name: value.Name,
+    };
   }
 
-  console.log(rates, 'rates');
-
-  return rates as Rates;
+  return rates as RatesDTO;
 };

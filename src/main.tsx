@@ -4,9 +4,10 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { RootNavigator } from './router/root-navigator';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
 import { SystemBars } from 'react-native-bars';
-import { useStore } from './lib/store';
+import { useAllRates } from './lib/store';
 import { useEffect, useState } from 'react';
 import { getRates } from './lib/api';
+import { UnistylesRuntime } from 'react-native-unistyles';
 
 const LightTheme: typeof DefaultTheme = {
   dark: false,
@@ -20,7 +21,11 @@ const LightTheme: typeof DefaultTheme = {
 export const Main = () => {
   const scheme = useColorScheme();
   const [ready, setReady] = useState(false);
-  const setRates = useStore((store) => store.setRates);
+  const setRates = useAllRates((store) => store.setRates);
+
+  useEffect(() => {
+    UnistylesRuntime.setTheme(scheme === 'dark' ? 'dark' : 'light');
+  }, [scheme]);
 
   useEffect(() => {
     const init = async () => {

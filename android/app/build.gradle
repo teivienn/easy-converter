@@ -81,9 +81,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.currency"
+    namespace "teivienn.currency"
     defaultConfig {
-        applicationId "com.currency"
+        applicationId "teivienn.currency"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
