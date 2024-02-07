@@ -31,4 +31,8 @@ export const stylesheet = createStyleSheet((theme) => ({
     width: 220,
     color: theme.colors.text,
   },
+  icon: {
+    width: 35,
+    height: 35,
+  },
 }));

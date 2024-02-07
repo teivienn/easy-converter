@@ -5,9 +5,9 @@ import { RootNavigator } from './router/root-navigator';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
 import { SystemBars } from 'react-native-bars';
 import { useAllRates } from './lib/store';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { getRates } from './lib/api';
-import { UnistylesRuntime } from 'react-native-unistyles';
+import { useMount } from './hooks/lifecycle';
 
 const LightTheme: typeof DefaultTheme = {
   dark: false,
@@ -23,11 +23,7 @@ export const Main = () => {
   const [ready, setReady] = useState(false);
   const setRates = useAllRates((store) => store.setRates);
 
-  useEffect(() => {
-    UnistylesRuntime.setTheme(scheme === 'dark' ? 'dark' : 'light');
-  }, [scheme]);
-
-  useEffect(() => {
+  useMount(() => {
     const init = async () => {
       setRates(await getRates());
 
@@ -35,9 +31,7 @@ export const Main = () => {
     };
 
     init();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  });
 
   if (!ready) {
     return null;

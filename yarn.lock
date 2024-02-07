@@ -15,19 +15,6 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@antfu/install-pkg@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@antfu/install-pkg/-/install-pkg-0.1.1.tgz#157bb04f0de8100b9e4c01734db1a6c77e98bbb5"
-  integrity sha512-LyB/8+bSfa0DFGC06zpCEfs89/XoWZwws5ygEa5D+Xsm3OfI+aXQ86VgVG7Acyef+rSZ5HE7J8rrxzrQeM3PjQ==
-  dependencies:
-    execa "^5.1.1"
-    find-up "^5.0.0"
-
-"@antfu/utils@^0.7.5":
-  version "0.7.7"
-  resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.7.tgz#26ea493a831b4f3a85475e7157be02fb4eab51fb"
-  integrity sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==
-
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.22.13", "@babel/code-frame@^7.23.5":
   version "7.23.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.23.5.tgz#9009b69a8c602293476ad598ff53e4562e15c244"
@@ -1260,31 +1247,6 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.2.tgz#d9fae00a2d5cb40f92cfe64b47ad749fbc38f917"
   integrity sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==
 
-"@iconify/json@^2.2.171":
-  version "2.2.171"
-  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.2.171.tgz#4e00b19ab6afac002f64b69363b2c415fe1b7dd8"
-  integrity sha512-NfmbMQpM+rUUMdLfNPEvUUrNmhp0+xshVuPsZk7c8MfGjwEnn14pb80KJlNV5toiAP/0uGAfrhJ+6WZY0nUY/A==
-  dependencies:
-    "@iconify/types" "*"
-    pathe "^1.1.0"
-
-"@iconify/types@*", "@iconify/types@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
-  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
-
-"@iconify/utils@^2.1.15":
-  version "2.1.15"
-  resolved "https://registry.yarnpkg.com/@iconify/utils/-/utils-2.1.15.tgz#fd3279c043be8edc1a6bf8b79b08d86f4e20fdff"
-  integrity sha512-8chdk3NhkYiqIVxPRBPN5wGnVYaTqc8XUagCNez84Ex7yK/oNrj1XINVn7zv+JljqZbF6r5B/bd1gRNlMSwYhg==
-  dependencies:
-    "@antfu/install-pkg" "^0.1.1"
-    "@antfu/utils" "^0.7.5"
-    "@iconify/types" "^2.0.0"
-    debug "^4.3.4"
-    kolorist "^1.8.0"
-    local-pkg "^0.4.3"
-
 "@isaacs/ttlcache@^1.4.1":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@isaacs/ttlcache/-/ttlcache-1.4.1.tgz#21fb23db34e9b6220c6ba023a0118a2dd3461ea2"
@@ -2080,6 +2042,21 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.11.tgz#2596fb352ee96a1379c657734d4b913a613ad563"
   integrity sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==
 
+"@types/react-native-vector-icons@^6.4.18":
+  version "6.4.18"
+  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.18.tgz#18671c617b9d0958747bc959903470dde91a8c79"
+  integrity sha512-YGlNWb+k5laTBHd7+uZowB9DpIK3SXUneZqAiKQaj1jnJCZM0x71GDim5JCTMi4IFkhc9m8H/Gm28T5BjyivUw==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "^0.70"
+
+"@types/react-native@^0.70":
+  version "0.70.19"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.70.19.tgz#b4e651dcf7f49c69ff3a4c3072584cad93155582"
+  integrity sha512-c6WbyCgWTBgKKMESj/8b4w+zWcZSsCforson7UdXtXMecG3MxCinYi6ihhrHVPyUrVzORsvEzK8zg32z4pK6Sg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-test-renderer@^18.0.0":
   version "18.0.7"
   resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-18.0.7.tgz#2cfe657adb3688cdf543995eceb2e062b5a68728"
@@ -2728,6 +2705,15 @@ cliui@^6.0.0:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
+
+cliui@^7.0.2:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/cliui/-/cliui-7.0.4.tgz#a0265ee655476fc807aea9df3df8df7783808b4f"
+  integrity sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==
+  dependencies:
+    string-width "^4.2.0"
+    strip-ansi "^6.0.0"
+    wrap-ansi "^7.0.0"
 
 cliui@^8.0.1:
   version "8.0.1"
@@ -4802,11 +4788,6 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-kolorist@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/kolorist/-/kolorist-1.8.0.tgz#edddbbbc7894bc13302cdf740af6374d4a04743c"
-  integrity sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==
-
 leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/leven/-/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
@@ -4832,11 +4813,6 @@ lines-and-columns@^1.1.6:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
-
-local-pkg@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/local-pkg/-/local-pkg-0.4.3.tgz#0ff361ab3ae7f1c19113d9bb97b98b905dbc4963"
-  integrity sha512-SFppqq5p42fe2qcZQqqEOiVRXl+WCP1MdT6k7BDEW1j++sp5fIY+/fdRQitvKgB5BrBcmrs5m/L0v2FrU5MY1g==
 
 locate-path@^3.0.0:
   version "3.0.0"
@@ -5551,11 +5527,6 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-pathe@^1.1.0:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/pathe/-/pathe-1.1.2.tgz#6c4cb47a945692e48a1ddd6e4094d170516437ec"
-  integrity sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==
-
 picocolors@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
@@ -5746,14 +5717,6 @@ react-native-gesture-handler@^2.14.1:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
-react-native-iconify@^0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/react-native-iconify/-/react-native-iconify-0.2.11.tgz#62058b501a21c65e99f5599c262fd78954133cf9"
-  integrity sha512-Nnb1UDOAC4Fq9/FfcopfIxG9oKU/8y/2RLTelWHf0myRZ9QrXSX6Qw+PMRlKOH1zM3qaXUn039rSYgqambZLvQ==
-  dependencies:
-    "@iconify/json" "^2.2.171"
-    "@iconify/utils" "^2.1.15"
-
 react-native-keyboard-controller@^1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/react-native-keyboard-controller/-/react-native-keyboard-controller-1.10.3.tgz#1da4df08beb4ece24a1efbd5611e85ca53d33953"
@@ -5799,6 +5762,14 @@ react-native-unistyles@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/react-native-unistyles/-/react-native-unistyles-2.0.2.tgz#406dc2f1e7db73109b9125b78f57a2fedd0b93c1"
   integrity sha512-UVifzdHRyw9IfZ+l7zbnmsF3PVuZPDmE+cs6IEcP8jUaahyww50KAky/KYLKoFbSlUA8B8s4x3xw0y7ooler+w==
+
+react-native-vector-icons@^10.0.3:
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-10.0.3.tgz#369824a3b17994b2cd65edbaa32dbf9540d49678"
+  integrity sha512-ZgVlV5AdQgnPHHvBEihGf2xwyziT1acpXV1U+WfCgCv3lcEeCRsmwAsBU+kUSNsU+8TcWVsX04kdI6qUaS8D7w==
+  dependencies:
+    prop-types "^15.7.2"
+    yargs "^16.1.1"
 
 react-native@0.73.2:
   version "0.73.2"
@@ -6928,6 +6899,11 @@ yargs-parser@^18.1.2:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
+yargs-parser@^20.2.2:
+  version "20.2.9"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.9.tgz#2eb7dc3b0289718fc295f362753845c41a0c94ee"
+  integrity sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==
+
 yargs-parser@^21.1.1:
   version "21.1.1"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
@@ -6949,6 +6925,19 @@ yargs@^15.1.0:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+yargs@^16.1.1:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
+  integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
+  dependencies:
+    cliui "^7.0.2"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
+    require-directory "^2.1.1"
+    string-width "^4.2.0"
+    y18n "^5.0.5"
+    yargs-parser "^20.2.2"
 
 yargs@^17.3.1, yargs@^17.6.2:
   version "17.7.2"

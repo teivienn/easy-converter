@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './styles';
 import Input from 'react-native-currency-input';
@@ -6,7 +6,7 @@ import { Currencies } from '../../types';
 import { useAllRates, useStore } from '../../lib/store';
 
 type CurrencyInputProps = {
-  Icon: JSX.Element;
+  Icon: number;
   name: Currencies;
 };
 
@@ -18,7 +18,7 @@ export const CurrencyInput = ({ Icon, name }: CurrencyInputProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
-        {Icon}
+        <Image source={Icon} style={styles.icon} />
         <Text style={styles.name}>{name}</Text>
       </View>
       <View style={styles.inputContainer}>

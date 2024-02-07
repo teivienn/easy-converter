@@ -1,181 +1,225 @@
-import { Iconify } from 'react-native-iconify';
 import { Currencies } from '../../types';
 
-export const currencies: Record<Currencies, { name: string; Icon: JSX.Element }> = {
+import ru from '../../assets/icon-flags/ru.png';
+import by from '../../assets/icon-flags/by.png';
+import us from '../../assets/icon-flags/us.png';
+import eu from '../../assets/icon-flags/eu.png';
+import pl from '../../assets/icon-flags/pl.png';
+import cn from '../../assets/icon-flags/cn.png';
+import au from '../../assets/icon-flags/au.png';
+import az from '../../assets/icon-flags/az.png';
+import gb from '../../assets/icon-flags/gb.png';
+import am from '../../assets/icon-flags/am.png';
+import bg from '../../assets/icon-flags/bg.png';
+import br from '../../assets/icon-flags/br.png';
+import hu from '../../assets/icon-flags/hu.png';
+import vn from '../../assets/icon-flags/vn.png';
+import hk from '../../assets/icon-flags/hk.png';
+import ge from '../../assets/icon-flags/ge.png';
+import dk from '../../assets/icon-flags/dk.png';
+import ae from '../../assets/icon-flags/ae.png';
+import eg from '../../assets/icon-flags/eg.png';
+import india from '../../assets/icon-flags/in.png';
+import id from '../../assets/icon-flags/id.png';
+import kz from '../../assets/icon-flags/kz.png';
+import ca from '../../assets/icon-flags/ca.png';
+import qa from '../../assets/icon-flags/qa.png';
+import kr from '../../assets/icon-flags/kr.png';
+import md from '../../assets/icon-flags/md.png';
+import nz from '../../assets/icon-flags/nz.png';
+import no from '../../assets/icon-flags/no.png';
+import ro from '../../assets/icon-flags/ro.png';
+import sd from '../../assets/icon-flags/sd.png';
+import sg from '../../assets/icon-flags/sg.png';
+import tj from '../../assets/icon-flags/tj.png';
+import th from '../../assets/icon-flags/th.png';
+import tr from '../../assets/icon-flags/tr.png';
+import tm from '../../assets/icon-flags/tm.png';
+import uz from '../../assets/icon-flags/uz.png';
+import ua from '../../assets/icon-flags/ua.png';
+import cz from '../../assets/icon-flags/cz.png';
+import se from '../../assets/icon-flags/se.png';
+import ch from '../../assets/icon-flags/ch.png';
+import rs from '../../assets/icon-flags/rs.png';
+import za from '../../assets/icon-flags/za.png';
+import jp from '../../assets/icon-flags/jp.png';
+import kg from '../../assets/icon-flags/kg.png';
+
+export const currencies: Record<Currencies, { name: string; Icon: number }> = {
   [Currencies.RUB]: {
     name: 'Российский рубль',
-    Icon: <Iconify icon="circle-flags:ru" size={34} />,
+    Icon: ru,
   },
   [Currencies.BYN]: {
     name: 'Белорусский рубль',
-    Icon: <Iconify icon="circle-flags:by" size={34} />,
+    Icon: by,
   },
   [Currencies.USD]: {
     name: 'Американский доллар',
-    Icon: <Iconify icon="circle-flags:us" size={34} />,
+    Icon: us,
   },
   [Currencies.EUR]: {
     name: 'Евро',
-    Icon: <Iconify icon="circle-flags:eu" size={34} />,
+    Icon: eu,
   },
   [Currencies.PLN]: {
     name: 'Польский злотый',
-    Icon: <Iconify icon="circle-flags:pl" size={34} />,
+    Icon: pl,
   },
   [Currencies.CNY]: {
     name: 'Китайский юань',
-    Icon: <Iconify icon="circle-flags:cn" size={34} />,
+    Icon: cn,
   },
   [Currencies.AUD]: {
     name: 'Австралийский доллар',
-    Icon: <Iconify icon="circle-flags:au" size={34} />,
+    Icon: au,
   },
   [Currencies.AZN]: {
     name: 'Азербайджанский манат',
-    Icon: <Iconify icon="circle-flags:az" size={34} />,
+    Icon: az,
   },
   [Currencies.GBP]: {
     name: 'Фунт стерлингов',
-    Icon: <Iconify icon="circle-flags:gb" size={34} />,
+    Icon: gb,
   },
   [Currencies.AMD]: {
     name: 'Армянский драм',
-    Icon: <Iconify icon="circle-flags:am" size={34} />,
+    Icon: am,
   },
   [Currencies.BGN]: {
     name: 'Болгарский лев',
-    Icon: <Iconify icon="circle-flags:bg" size={34} />,
+    Icon: bg,
   },
   [Currencies.BRL]: {
     name: 'Бразильский реал',
-    Icon: <Iconify icon="circle-flags:br" size={34} />,
+    Icon: br,
   },
   [Currencies.HUF]: {
     name: 'Венгерский форинт',
-    Icon: <Iconify icon="circle-flags:hu" size={34} />,
+    Icon: hu,
   },
   [Currencies.VND]: {
     name: 'Вьетнамский донг',
-    Icon: <Iconify icon="circle-flags:vn" size={34} />,
+    Icon: vn,
   },
   [Currencies.HKD]: {
     name: 'Гонконгский доллар',
-    Icon: <Iconify icon="circle-flags:hk" size={34} />,
+    Icon: hk,
   },
   [Currencies.GEL]: {
     name: 'Грузинский лари',
-    Icon: <Iconify icon="circle-flags:ge" size={34} />,
+    Icon: ge,
   },
   [Currencies.DKK]: {
     name: 'Датская крона',
-    Icon: <Iconify icon="circle-flags:dk" size={34} />,
+    Icon: dk,
   },
   [Currencies.AED]: {
     name: 'Дирхам ОАЭ',
-    Icon: <Iconify icon="circle-flags:ae" size={34} />,
+    Icon: ae,
   },
   [Currencies.EGP]: {
     name: 'Египетский фунт',
-    Icon: <Iconify icon="circle-flags:eg" size={34} />,
+    Icon: eg,
   },
   [Currencies.INR]: {
     name: 'Индийская рупия',
-    Icon: <Iconify icon="circle-flags:in" size={34} />,
+    Icon: india,
   },
   [Currencies.IDR]: {
     name: 'Индонезийская рупия',
-    Icon: <Iconify icon="circle-flags:id" size={34} />,
+    Icon: id,
   },
   [Currencies.KZT]: {
     name: 'Казахстанский тенге',
-    Icon: <Iconify icon="circle-flags:kz" size={34} />,
+    Icon: kz,
   },
   [Currencies.CAD]: {
     name: 'Канадский доллар',
-    Icon: <Iconify icon="circle-flags:ca" size={34} />,
+    Icon: ca,
   },
   [Currencies.QAR]: {
     name: 'Катарский риал',
-    Icon: <Iconify icon="circle-flags:qa" size={34} />,
+    Icon: qa,
   },
   [Currencies.KRW]: {
     name: 'Корейская вона',
-    Icon: <Iconify icon="circle-flags:kr" size={34} />,
+    Icon: kr,
   },
   [Currencies.MDL]: {
     name: 'Молдавский лей',
-    Icon: <Iconify icon="circle-flags:md" size={34} />,
+    Icon: md,
   },
   [Currencies.NZD]: {
     name: 'Новозеландский доллар',
-    Icon: <Iconify icon="circle-flags:nz" size={34} />,
+    Icon: nz,
   },
   [Currencies.NOK]: {
     name: 'Норвежская крона',
-    Icon: <Iconify icon="circle-flags:no" size={34} />,
+    Icon: no,
   },
   [Currencies.RON]: {
     name: 'Румынский лей',
-    Icon: <Iconify icon="circle-flags:ro" size={34} />,
+    Icon: ro,
   },
   [Currencies.XDR]: {
     name: 'СДР (специальные права заимствования)',
-    Icon: <Iconify icon="circle-flags:sd" size={34} />,
+    Icon: sd,
   },
   [Currencies.SGD]: {
     name: 'Сингапурский доллар',
-    Icon: <Iconify icon="circle-flags:sg" size={34} />,
+    Icon: sg,
   },
   [Currencies.TJS]: {
     name: 'Таджикский сомони',
-    Icon: <Iconify icon="circle-flags:tj" size={34} />,
+    Icon: tj,
   },
   [Currencies.THB]: {
     name: 'Тайский бат',
-    Icon: <Iconify icon="circle-flags:th" size={34} />,
+    Icon: th,
   },
   [Currencies.TRY]: {
     name: 'Турецкая лира',
-    Icon: <Iconify icon="circle-flags:tr" size={34} />,
+    Icon: tr,
   },
   [Currencies.TMT]: {
     name: 'Туркменский манат',
-    Icon: <Iconify icon="circle-flags:tm" size={34} />,
+    Icon: tm,
   },
   [Currencies.UZS]: {
     name: 'Узбекский сум',
-    Icon: <Iconify icon="circle-flags:uz" size={34} />,
+    Icon: uz,
   },
   [Currencies.UAH]: {
     name: 'Украинский гривна',
-    Icon: <Iconify icon="circle-flags:ua" size={34} />,
+    Icon: ua,
   },
   [Currencies.CZK]: {
     name: 'Чешская крона',
-    Icon: <Iconify icon="circle-flags:cz" size={34} />,
+    Icon: cz,
   },
   [Currencies.SEK]: {
     name: 'Шведская крона',
-    Icon: <Iconify icon="circle-flags:se" size={34} />,
+    Icon: se,
   },
   [Currencies.CHF]: {
     name: 'Швейцарский франк',
-    Icon: <Iconify icon="circle-flags:ch" size={34} />,
+    Icon: ch,
   },
   [Currencies.RSD]: {
     name: 'Сербский динар',
-    Icon: <Iconify icon="circle-flags:rs" size={34} />,
+    Icon: rs,
   },
   [Currencies.ZAR]: {
     name: 'Южноафриканский рэнд',
-    Icon: <Iconify icon="circle-flags:za" size={34} />,
+    Icon: za,
   },
   [Currencies.JPY]: {
     name: 'Японская иена',
-    Icon: <Iconify icon="circle-flags:jp" size={34} />,
+    Icon: jp,
   },
   [Currencies.KGS]: {
     name: 'Киргизский сом',
-    Icon: <Iconify icon="circle-flags:kg" size={34} />,
+    Icon: kg,
   },
 };

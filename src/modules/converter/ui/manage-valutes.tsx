@@ -1,15 +1,14 @@
-import { useNavigation, useTheme } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { IconButton } from '../../../components/icon-button';
-import { Iconify } from 'react-native-iconify';
 import { StyleSheet } from 'react-native';
+import Feather from 'react-native-vector-icons/Feather';
 
 export const ManageValutes = () => {
   const { navigate } = useNavigation();
-  const theme = useTheme();
 
   return (
     <IconButton style={styles.button} onPress={() => navigate('valutes')}>
-      <Iconify icon="material-symbols:add-rounded" scale={25} color={theme.colors.text} />
+      <Feather name="plus" size={24} color="black" />
     </IconButton>
   );
 };

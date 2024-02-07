@@ -6,15 +6,17 @@ const light = {
     secondary: '#f7f9fc',
     background: '#ffffff',
     text: '#1E1E1E',
+    border: 'rgb(216, 216, 216)',
   },
 } as const;
 
 const dark = {
   colors: {
     primary: '#673AB7',
-    secondary: '#1E1E1E',
+    secondary: 'rgb(18, 18, 18)',
     background: 'rgb(1, 1, 1)',
     text: '#fcfcfc',
+    border: 'rgb(39, 39, 41)',
   },
 } as const;
 
@@ -25,7 +27,6 @@ type Theme = {
 
 UnistylesRegistry.addThemes({ light, dark }).addConfig({
   adaptiveThemes: true,
-  initialTheme: 'light',
 });
 
 declare module 'react-native-unistyles' {

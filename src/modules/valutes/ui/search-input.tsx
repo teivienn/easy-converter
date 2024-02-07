@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { TextInput, View } from 'react-native';
-import { Iconify } from 'react-native-iconify';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
 
 type SearchInputProps = {
@@ -15,12 +14,12 @@ export const SearchInput = ({ value, setValue }: SearchInputProps) => {
   return (
     <View style={styles.container}>
       <View style={[styles.inputContainer, (focus || !!value) && styles.focus]}>
-        <Iconify
+        {/* <Iconify
           icon="material-symbols:search"
           size={26}
           color={theme.colors.text}
           style={styles.searchIcon}
-        />
+        /> */}
         <TextInput
           style={styles.input}
           value={value}
@@ -38,10 +37,14 @@ export const SearchInput = ({ value, setValue }: SearchInputProps) => {
 const stylesheet = createStyleSheet((theme) => ({
   container: {
     padding: 16,
+    backgroundColor: {
+      light: theme.colors.background,
+      dark: theme.colors.secondary,
+    },
   },
   inputContainer: {
     borderRadius: 8,
-    backgroundColor: theme.colors.secondary,
+    backgroundColor: theme.colors.border,
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,

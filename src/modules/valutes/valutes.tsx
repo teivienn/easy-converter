@@ -1,19 +1,25 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { SearchInput } from './ui/search-input';
-import { FlatList, ListRenderItem } from 'react-native';
+import { ListRenderItem } from 'react-native';
 import { ValuteCard } from './ui/valute-card';
 import { useAllRates, useStore } from '../../lib/store';
 import { Currencies } from '../../types';
 import { currencies } from '../../lib/currencies/currencies';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
+import { InfinityList } from '../../components/infinity-list';
 
-const keyExtractor = ({ code }: { code: string }) => code;
+const keyExtractor = ({ code, name }: { code: string; name: string }) =>
+  `${code}-${name}`;
+
+const renderItem: ListRenderItem<ValuteCardProps> = ({ item }) => (
+  <ValuteCard {...item} />
+);
 
 type ValuteCardProps = {
   code: Currencies;
   name: string;
   value: number;
-  Icon: JSX.Element;
+  Icon: number;
   selected: boolean;
 };
 
@@ -46,44 +52,31 @@ export const Valutes = () => {
     );
   }, [data, search]);
 
-  const renderItem = useCallback<ListRenderItem<ValuteCardProps>>(({ item }) => {
-    return <ValuteCard {...item} />;
-  }, []);
+  console.log('rerender');
 
   return (
     <>
       <SearchInput value={search} setValue={setSearch} />
 
-      <FlatList
-        maxToRenderPerBatch={10}
-        windowSize={5}
-        initialNumToRender={20}
+      <InfinityList
         style={styles.scroll}
-        getItemLayout={(_, index) => ({
-          length: 80,
-          offset: 80 * index,
-          index,
-        })}
         contentContainerStyle={styles.container}
+        itemHeight={60}
         keyExtractor={keyExtractor}
         data={filteredData}
-        removeClippedSubviews
         renderItem={renderItem}
       />
     </>
   );
 };
 
-const stylesheet = createStyleSheet((theme) => ({
+const stylesheet = createStyleSheet(() => ({
   container: {
-    gap: 10,
     paddingHorizontal: 16,
     paddingBottom: 30,
     flexGrow: 1,
   },
   scroll: {
-    backgroundColor: theme.colors.secondary,
     paddingTop: 16,
-    flex: 1,
   },
 }));
