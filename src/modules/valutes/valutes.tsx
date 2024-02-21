@@ -52,8 +52,6 @@ export const Valutes = () => {
     );
   }, [data, search]);
 
-  console.log('rerender');
-
   return (
     <>
       <SearchInput value={search} setValue={setSearch} />

@@ -40,7 +40,7 @@ const stylesheet = createStyleSheet((theme) => ({
     backgroundColor: {
       light: theme.colors.background,
       dark: theme.colors.secondary,
-    },
+    } as unknown as string,
   },
   inputContainer: {
     borderRadius: 8,

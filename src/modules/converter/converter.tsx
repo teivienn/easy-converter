@@ -20,8 +20,6 @@ export const Converter = () => {
   const { styles } = useStyles(stylesheet);
   const { loading, refetch } = useUpdateRates();
 
-  console.log(height.value, 'height');
-
   const fakeView = useAnimatedStyle(
     () => ({
       height: Math.abs(height.value),

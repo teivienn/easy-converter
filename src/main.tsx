@@ -1,13 +1,13 @@
 import './lib/unistyles';
-import { useColorScheme } from 'react-native';
+import { StatusBar, useColorScheme } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { RootNavigator } from './router/root-navigator';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
-import { SystemBars } from 'react-native-bars';
 import { useAllRates } from './lib/store';
 import { useState } from 'react';
 import { getRates } from './lib/api';
 import { useMount } from './hooks/lifecycle';
+import BootSplash from 'react-native-bootsplash';
 
 const LightTheme: typeof DefaultTheme = {
   dark: false,
@@ -30,7 +30,7 @@ export const Main = () => {
       setReady(true);
     };
 
-    init();
+    init().finally(() => BootSplash.hide({ fade: true }));
   });
 
   if (!ready) {
@@ -41,8 +41,9 @@ export const Main = () => {
     <KeyboardProvider statusBarTranslucent>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : LightTheme}>
         <RootNavigator />
-        <SystemBars
-          animated
+        <StatusBar
+          translucent
+          backgroundColor="transparent"
           barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
         />
       </NavigationContainer>
