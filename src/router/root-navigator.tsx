@@ -1,31 +1,25 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { Converter } from '../modules/converter';
-import { Valutes } from '../modules/valutes';
 import { ParamList } from './types';
+import { Explore } from '../modules/explore';
+import { Settings } from '../modules/settings';
+import { useStore } from '../lib/app-store';
+import { Onboarding } from '../modules/onboarding';
 
 const Stack = createStackNavigator<ParamList>();
 
 export const RootNavigator = () => {
+  const { onboard } = useStore();
+
   return (
     <Stack.Navigator
-      initialRouteName="converter"
+      initialRouteName={onboard ? 'explore' : 'onboarding'}
       screenOptions={{
-        headerTitleAlign: 'center',
-        headerTitleStyle: {
-          fontWeight: '500',
-        },
+        headerShown: false,
       }}
     >
-      <Stack.Screen
-        name="converter"
-        component={Converter}
-        options={{ title: 'Easy Converter' }}
-      />
-      <Stack.Screen
-        name="valutes"
-        component={Valutes}
-        options={{ title: 'Выбор валют' }}
-      />
+      {!onboard && <Stack.Screen name="onboarding" component={Onboarding} />}
+      <Stack.Screen name="explore" component={Explore} />
+      <Stack.Screen name="settings" component={Settings} />
     </Stack.Navigator>
   );
 };

@@ -1,8 +1,9 @@
 import { ParamListBase } from '@react-navigation/native';
 
 export interface ParamList extends ParamListBase {
-  valutes: undefined;
-  converter: undefined;
+  settings: undefined;
+  currencies: undefined;
+  explore: undefined;
 }
 
 declare global {

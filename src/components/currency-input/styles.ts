@@ -5,7 +5,6 @@ export const stylesheet = createStyleSheet((theme) => ({
     backgroundColor: theme.colors.background,
     borderRadius: 10,
     flexDirection: 'row',
-    padding: 10,
     justifyContent: 'space-between',
     alignItems: 'center',
     elevation: 1,
@@ -14,7 +13,7 @@ export const stylesheet = createStyleSheet((theme) => ({
   name: {
     color: theme.colors.text,
     paddingLeft: 10,
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '500',
   },
   row: {
@@ -24,15 +23,16 @@ export const stylesheet = createStyleSheet((theme) => ({
   inputContainer: {
     borderRadius: 10,
     backgroundColor: theme.colors.secondary,
+    flex: 1,
+    marginLeft: 10,
   },
   input: {
     fontSize: 16,
     paddingHorizontal: 10,
-    width: 220,
     color: theme.colors.text,
   },
   icon: {
-    width: 35,
-    height: 35,
+    width: 25,
+    height: 25,
   },
 }));

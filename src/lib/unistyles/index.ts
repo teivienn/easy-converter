@@ -7,6 +7,7 @@ const light = {
     background: '#ffffff',
     text: '#1E1E1E',
     border: 'rgb(216, 216, 216)',
+    fabBg: '#673AB7',
   },
 } as const;
 
@@ -17,6 +18,7 @@ const dark = {
     background: 'rgb(1, 1, 1)',
     text: '#fcfcfc',
     border: 'rgb(39, 39, 41)',
+    fabBg: '#ffffff',
   },
 } as const;
 

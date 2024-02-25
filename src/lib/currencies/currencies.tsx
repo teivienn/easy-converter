@@ -1,4 +1,4 @@
-import { Currencies } from '../../types';
+import { CurrencyCodes } from '../../types';
 
 import ru from '../../assets/icon-flags/ru.png';
 import by from '../../assets/icon-flags/by.png';
@@ -45,180 +45,180 @@ import za from '../../assets/icon-flags/za.png';
 import jp from '../../assets/icon-flags/jp.png';
 import kg from '../../assets/icon-flags/kg.png';
 
-export const currencies: Record<Currencies, { name: string; Icon: number }> = {
-  [Currencies.RUB]: {
+export const currencies: Record<CurrencyCodes, { name: string; Icon: number }> = {
+  [CurrencyCodes.RUB]: {
     name: 'Российский рубль',
     Icon: ru,
   },
-  [Currencies.BYN]: {
+  [CurrencyCodes.BYN]: {
     name: 'Белорусский рубль',
     Icon: by,
   },
-  [Currencies.USD]: {
+  [CurrencyCodes.USD]: {
     name: 'Американский доллар',
     Icon: us,
   },
-  [Currencies.EUR]: {
+  [CurrencyCodes.EUR]: {
     name: 'Евро',
     Icon: eu,
   },
-  [Currencies.PLN]: {
+  [CurrencyCodes.PLN]: {
     name: 'Польский злотый',
     Icon: pl,
   },
-  [Currencies.CNY]: {
+  [CurrencyCodes.CNY]: {
     name: 'Китайский юань',
     Icon: cn,
   },
-  [Currencies.AUD]: {
+  [CurrencyCodes.AUD]: {
     name: 'Австралийский доллар',
     Icon: au,
   },
-  [Currencies.AZN]: {
+  [CurrencyCodes.AZN]: {
     name: 'Азербайджанский манат',
     Icon: az,
   },
-  [Currencies.GBP]: {
+  [CurrencyCodes.GBP]: {
     name: 'Фунт стерлингов',
     Icon: gb,
   },
-  [Currencies.AMD]: {
+  [CurrencyCodes.AMD]: {
     name: 'Армянский драм',
     Icon: am,
   },
-  [Currencies.BGN]: {
+  [CurrencyCodes.BGN]: {
     name: 'Болгарский лев',
     Icon: bg,
   },
-  [Currencies.BRL]: {
+  [CurrencyCodes.BRL]: {
     name: 'Бразильский реал',
     Icon: br,
   },
-  [Currencies.HUF]: {
+  [CurrencyCodes.HUF]: {
     name: 'Венгерский форинт',
     Icon: hu,
   },
-  [Currencies.VND]: {
+  [CurrencyCodes.VND]: {
     name: 'Вьетнамский донг',
     Icon: vn,
   },
-  [Currencies.HKD]: {
+  [CurrencyCodes.HKD]: {
     name: 'Гонконгский доллар',
     Icon: hk,
   },
-  [Currencies.GEL]: {
+  [CurrencyCodes.GEL]: {
     name: 'Грузинский лари',
     Icon: ge,
   },
-  [Currencies.DKK]: {
+  [CurrencyCodes.DKK]: {
     name: 'Датская крона',
     Icon: dk,
   },
-  [Currencies.AED]: {
+  [CurrencyCodes.AED]: {
     name: 'Дирхам ОАЭ',
     Icon: ae,
   },
-  [Currencies.EGP]: {
+  [CurrencyCodes.EGP]: {
     name: 'Египетский фунт',
     Icon: eg,
   },
-  [Currencies.INR]: {
+  [CurrencyCodes.INR]: {
     name: 'Индийская рупия',
     Icon: india,
   },
-  [Currencies.IDR]: {
+  [CurrencyCodes.IDR]: {
     name: 'Индонезийская рупия',
     Icon: id,
   },
-  [Currencies.KZT]: {
+  [CurrencyCodes.KZT]: {
     name: 'Казахстанский тенге',
     Icon: kz,
   },
-  [Currencies.CAD]: {
+  [CurrencyCodes.CAD]: {
     name: 'Канадский доллар',
     Icon: ca,
   },
-  [Currencies.QAR]: {
+  [CurrencyCodes.QAR]: {
     name: 'Катарский риал',
     Icon: qa,
   },
-  [Currencies.KRW]: {
+  [CurrencyCodes.KRW]: {
     name: 'Корейская вона',
     Icon: kr,
   },
-  [Currencies.MDL]: {
+  [CurrencyCodes.MDL]: {
     name: 'Молдавский лей',
     Icon: md,
   },
-  [Currencies.NZD]: {
+  [CurrencyCodes.NZD]: {
     name: 'Новозеландский доллар',
     Icon: nz,
   },
-  [Currencies.NOK]: {
+  [CurrencyCodes.NOK]: {
     name: 'Норвежская крона',
     Icon: no,
   },
-  [Currencies.RON]: {
+  [CurrencyCodes.RON]: {
     name: 'Румынский лей',
     Icon: ro,
   },
-  [Currencies.XDR]: {
+  [CurrencyCodes.XDR]: {
     name: 'СДР (специальные права заимствования)',
     Icon: sd,
   },
-  [Currencies.SGD]: {
+  [CurrencyCodes.SGD]: {
     name: 'Сингапурский доллар',
     Icon: sg,
   },
-  [Currencies.TJS]: {
+  [CurrencyCodes.TJS]: {
     name: 'Таджикский сомони',
     Icon: tj,
   },
-  [Currencies.THB]: {
+  [CurrencyCodes.THB]: {
     name: 'Тайский бат',
     Icon: th,
   },
-  [Currencies.TRY]: {
+  [CurrencyCodes.TRY]: {
     name: 'Турецкая лира',
     Icon: tr,
   },
-  [Currencies.TMT]: {
+  [CurrencyCodes.TMT]: {
     name: 'Туркменский манат',
     Icon: tm,
   },
-  [Currencies.UZS]: {
+  [CurrencyCodes.UZS]: {
     name: 'Узбекский сум',
     Icon: uz,
   },
-  [Currencies.UAH]: {
+  [CurrencyCodes.UAH]: {
     name: 'Украинский гривна',
     Icon: ua,
   },
-  [Currencies.CZK]: {
+  [CurrencyCodes.CZK]: {
     name: 'Чешская крона',
     Icon: cz,
   },
-  [Currencies.SEK]: {
+  [CurrencyCodes.SEK]: {
     name: 'Шведская крона',
     Icon: se,
   },
-  [Currencies.CHF]: {
+  [CurrencyCodes.CHF]: {
     name: 'Швейцарский франк',
     Icon: ch,
   },
-  [Currencies.RSD]: {
+  [CurrencyCodes.RSD]: {
     name: 'Сербский динар',
     Icon: rs,
   },
-  [Currencies.ZAR]: {
+  [CurrencyCodes.ZAR]: {
     name: 'Южноафриканский рэнд',
     Icon: za,
   },
-  [Currencies.JPY]: {
+  [CurrencyCodes.JPY]: {
     name: 'Японская иена',
     Icon: jp,
   },
-  [Currencies.KGS]: {
+  [CurrencyCodes.KGS]: {
     name: 'Киргизский сом',
     Icon: kg,
   },
