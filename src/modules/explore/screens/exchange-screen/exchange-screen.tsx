@@ -1,10 +1,14 @@
-import { ScrollView, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useStore } from '../../../../lib/app-store';
 import { useMemo, useState } from 'react';
-import { CurrencyCodes, RatesProvider } from '../../../../types';
+import { CurrencyCard } from './components/CurrencyCard';
+import { Fab } from '../../../../components/fab';
+import { useNavigation } from '@react-navigation/native';
+import { InfinityList } from '../../../../components/core-ui/InfinityList';
 
 export const ExchangeScreen = () => {
-  const { rates, currencies, setCurrency, setProvider } = useStore();
+  const { rates, currencies } = useStore();
+  const { navigate } = useNavigation();
 
   const [baseRate, setBaseRate] = useState(0);
 
@@ -15,22 +19,33 @@ export const ExchangeScreen = () => {
   }, [currencies, rates]);
 
   return (
-    <ScrollView style={{ paddingTop: 20 }}>
-      <TouchableOpacity onPress={() => setCurrency(CurrencyCodes.BYN)}>
-        <Text>add byn</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => setCurrency(CurrencyCodes.RUB)}>
-        <Text>add RUB</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => setProvider(RatesProvider.NBRB)}>
-        <Text>NBRB</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => setProvider(RatesProvider.CBRF)}>
-        <Text>CBRF</Text>
-      </TouchableOpacity>
-      <Text>{JSON.stringify(data)}</Text>
-    </ScrollView>
+    <>
+      <InfinityList
+        itemHeight={70}
+        style={styles.scroll}
+        contentContainerStyle={styles.container}
+        data={data}
+        ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
+        renderItem={({ item }) => (
+          <CurrencyCard
+            currencyRate={item}
+            baseRate={baseRate}
+            setBaseRate={setBaseRate}
+          />
+        )}
+      />
+      <Fab onPress={() => navigate('currencies')} />
+    </>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 13,
+    flexGrow: 1,
+  },
+  scroll: {
+    paddingTop: 150,
+    flex: 1,
+  },
+});

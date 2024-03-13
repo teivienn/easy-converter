@@ -1,6 +1,6 @@
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
-import { Button } from './button';
 import Feather from 'react-native-vector-icons/Feather';
+import { Touchable } from './core-ui/Touchable';
 
 type Props = {
   icon: string;
@@ -10,14 +10,18 @@ type Props = {
 export const Fab = ({ icon = 'plus', onPress }: Props) => {
   const { styles, theme } = useStyles(stylesheet);
   return (
-    <Button style={styles.button} containerStyle={styles.container} onPress={onPress}>
+    <Touchable
+      rippleColor={theme.components.fab.rippleColor}
+      style={styles.button}
+      onPress={onPress}
+    >
       <Feather name={icon} size={35} color={theme.colors.background} />
-    </Button>
+    </Touchable>
   );
 };
 
 const stylesheet = createStyleSheet((theme) => ({
-  container: {
+  button: {
     position: 'absolute',
     height: 60,
     width: 60,
@@ -27,11 +31,6 @@ const stylesheet = createStyleSheet((theme) => ({
     bottom: 20,
     elevation: 3,
     shadowColor: theme.colors.primary,
-  },
-  button: {
-    height: 60,
-    width: 60,
-    borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },

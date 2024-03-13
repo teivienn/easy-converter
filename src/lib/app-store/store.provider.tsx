@@ -1,6 +1,6 @@
 import { useMemo, type PropsWithChildren, useEffect, useContext } from 'react';
 import { StoreContext } from './store.context';
-import type { CurrencyCodes, RatesProvider } from '../../types';
+import { CurrencyCodes, type RatesProvider } from '../../types';
 import type { StoreState, StoreActions } from './store.types';
 import type { RatesModel } from '../rates-api/rates-model';
 import { RatesApi } from '../rates-api';
@@ -60,7 +60,7 @@ export const StoreProvider = ({ children }: PropsWithChildren) => {
       rates: rates || ({} as StoreState['rates']),
       setCurrency,
       setProvider,
-      currencies: currencies || [],
+      currencies: currencies || [CurrencyCodes.USD, CurrencyCodes.KZT, CurrencyCodes.BYN],
       onboard: !!onboard,
       setOnboard,
     }),

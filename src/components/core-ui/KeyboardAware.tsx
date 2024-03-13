@@ -1,6 +1,5 @@
-import { View } from 'react-native';
 import { useReanimatedKeyboardAnimation } from 'react-native-keyboard-controller';
-import { useAnimatedStyle } from 'react-native-reanimated';
+import Animated, { useAnimatedStyle } from 'react-native-reanimated';
 
 export const KeyboardAware = () => {
   const { height } = useReanimatedKeyboardAnimation();
@@ -12,5 +11,5 @@ export const KeyboardAware = () => {
     [],
   );
 
-  return <View style={styles} />;
+  return <Animated.View style={styles} />;
 };

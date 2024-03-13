@@ -1,7 +1,7 @@
 import { createStyleSheet } from 'react-native-unistyles';
 
 export const stylesheet = createStyleSheet((theme) => ({
-  button: {
+  container: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -10,11 +10,7 @@ export const stylesheet = createStyleSheet((theme) => ({
     height: 100,
     borderColor: theme.colors.text,
     paddingHorizontal: 20,
-  },
-  container: {
-    height: 100,
     marginHorizontal: 20,
-    borderRadius: 30,
   },
   text: {
     color: theme.colors.text,

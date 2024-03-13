@@ -3,11 +3,11 @@ import { TabView, SceneMap } from '../../components/vertical-tab-view';
 import { useState } from 'react';
 import type { Route } from '../../components/vertical-tab-view/types';
 import { useNavigation, useTheme } from '@react-navigation/native';
-import { Button } from '../../components/button';
 import { CurrenciesPickerScreen } from './screens/currencies-picker-screen';
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { translate } from '../../lib/i18n';
+import { Touchable } from '../../components/core-ui/Touchable';
 
 const renderScene = SceneMap({
   CurrenciesPicker: CurrenciesPickerScreen,
@@ -24,9 +24,16 @@ export const Currencies = () => {
   ]);
 
   const leftButton = () => (
-    <Button onPress={goBack}>
+    <Touchable
+      hitSlop={{ top: 20, left: 20, right: 20, bottom: 20 }}
+      onPress={goBack}
+      style={{
+        borderRadius: 999,
+        padding: 4,
+      }}
+    >
       <Feather color={colors.text} name="chevron-left" size={24} />
-    </Button>
+    </Touchable>
   );
 
   return (
