@@ -6,10 +6,10 @@ import { ExchangeIcon } from '../../assets/icons/exchange';
 import { SettingsIcon } from '../../assets/icons/settings';
 import { RatesIcon } from '../../assets/icons/rates';
 import { useNavigation, useTheme } from '@react-navigation/native';
-import { Button } from '../../components/button';
 import { translate } from '../../lib/i18n';
 import { ExchangeScreen } from './screens/exchange-screen';
 import { RatesScreen } from './screens/rates-screen';
+import { Touchable } from '../../components/core-ui/Touchable';
 
 const renderScene = SceneMap({
   exchange: ExchangeScreen,
@@ -28,9 +28,12 @@ export const Explore = () => {
   ]);
 
   const leftButton = () => (
-    <Button onPress={() => navigate('settings')}>
-      <SettingsIcon color={colors.text} height={20} />
-    </Button>
+    <Touchable
+      onPress={() => navigate('settings')}
+      style={{ borderRadius: 999, padding: 5 }}
+    >
+      <SettingsIcon color={colors.text} height={20} width={20} />
+    </Touchable>
   );
 
   return (
