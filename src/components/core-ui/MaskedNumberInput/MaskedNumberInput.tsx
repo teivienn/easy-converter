@@ -4,6 +4,7 @@ import { TextInput, View, type TextInputProps } from 'react-native';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './stylesheet';
 import { useNumberFormat } from '../../../hooks/useNumberFormat';
+import Color from 'color';
 
 type MaskedNumberInputProps = Omit<
   TextInputProps,
@@ -61,6 +62,7 @@ export const MaskedNumberInput = forwardRef<TextInput, MaskedNumberInputProps>(
           cursorColor={theme.input.cursor}
           keyboardType="numeric"
           inputMode="decimal"
+          selectionColor={Color(theme.colors.primary).alpha(0.2).rgb().toString()}
           onChangeText={onChange}
           value={focused ? _value : formatValue}
           onFocus={(e) => [onFocus(), rest?.onFocus?.(e)]}

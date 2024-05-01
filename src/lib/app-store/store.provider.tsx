@@ -29,9 +29,7 @@ export const StoreProvider = ({ children }: PropsWithChildren) => {
   useEffect(() => {
     if (provider) {
       const get = async () => {
-        console.log('get rates: start');
         setRates(await RatesApi.getRates(provider));
-        console.log('get rates:end');
       };
 
       get().finally(() => {
@@ -60,7 +58,12 @@ export const StoreProvider = ({ children }: PropsWithChildren) => {
       rates: rates || ({} as StoreState['rates']),
       setCurrency,
       setProvider,
-      currencies: currencies || [CurrencyCodes.USD, CurrencyCodes.KZT, CurrencyCodes.BYN],
+      currencies: currencies || [
+        CurrencyCodes.USD,
+        CurrencyCodes.KZT,
+        CurrencyCodes.BYN,
+        CurrencyCodes.GEL,
+      ],
       onboard: !!onboard,
       setOnboard,
     }),

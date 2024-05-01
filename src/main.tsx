@@ -1,9 +1,10 @@
 import './lib/unistyles';
-import { StatusBar, useColorScheme } from 'react-native';
+import { useColorScheme } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { RootNavigator } from './router/root-navigator';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
 import { StoreProvider } from './lib/app-store';
+import { SystemBars } from 'react-native-bars';
 
 const LightTheme: typeof DefaultTheme = {
   dark: false,
@@ -17,16 +18,12 @@ const LightTheme: typeof DefaultTheme = {
 export const Main = () => {
   const scheme = useColorScheme();
   return (
-    <KeyboardProvider statusBarTranslucent>
+    <KeyboardProvider statusBarTranslucent navigationBarTranslucent>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : LightTheme}>
         <StoreProvider>
           <RootNavigator />
         </StoreProvider>
-        <StatusBar
-          translucent
-          backgroundColor="transparent"
-          barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-        />
+        <SystemBars barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
       </NavigationContainer>
     </KeyboardProvider>
   );

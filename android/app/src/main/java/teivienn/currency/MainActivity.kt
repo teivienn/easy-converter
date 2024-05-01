@@ -6,6 +6,7 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnable
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 import android.os.Bundle
 import com.zoontek.rnbootsplash.RNBootSplash
+import com.zoontek.rnbars.RNBars
 
 class MainActivity : ReactActivity() {
 
@@ -18,6 +19,7 @@ class MainActivity : ReactActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     RNBootSplash.init(this, R.style.BootTheme)
     super.onCreate(savedInstanceState) // super.onCreate(null) with react-native-screens
+    RNBars.init(this)
   }
 
   /**

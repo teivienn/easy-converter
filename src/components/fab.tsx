@@ -3,7 +3,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import { Touchable } from './core-ui/Touchable';
 
 type Props = {
-  icon: string;
+  icon?: string;
   onPress?: () => void;
 };
 
