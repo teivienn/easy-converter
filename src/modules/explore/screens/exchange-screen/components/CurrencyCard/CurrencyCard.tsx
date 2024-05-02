@@ -4,6 +4,7 @@ import { currencies } from '../../../../../../lib/currencies/currencies';
 import { useStyles } from 'react-native-unistyles';
 import { stylesheet } from './stylesheet';
 import { MaskedNumberInput } from '../../../../../../components/core-ui/MaskedNumberInput';
+import type { CurrencyCodes } from '~/types';
 
 type CurrencyCardProps = {
   currencyRate: RatesModel;
@@ -26,7 +27,7 @@ export const CurrencyCard = ({
   return (
     <View style={styles.container}>
       <View style={styles.info}>
-        <Image source={currencies[code].Icon} style={styles.icon} />
+        <Image source={currencies[code as CurrencyCodes].Icon} style={styles.icon} />
         <Text style={styles.name}>{code}</Text>
       </View>
       <MaskedNumberInput value={(nominal / rate) * baseRate} onChangeText={onChange} />

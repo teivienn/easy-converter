@@ -45,7 +45,7 @@ import za from '../../assets/icon-flags/za.png';
 import jp from '../../assets/icon-flags/jp.png';
 import kg from '../../assets/icon-flags/kg.png';
 
-export const currencies: Record<string, { name: string; Icon: number }> = {
+export const currencies: Record<CurrencyCodes, { name: string; Icon: number }> = {
   [CurrencyCodes.RUB]: {
     name: 'Российский рубль',
     Icon: ru,
