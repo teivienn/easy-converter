@@ -59,7 +59,11 @@
   "exchange": "Exchange",
   "rates": "Rates",
   "about": "About",
-  "data_provider": "Data Provider",
-  "data_provider_name": "The Central Bank of the Russian Federation",
-  "data_provider_info_site": "View information on the website"
+  "settings": "Settings",
+  "search": "Search",
+  "data_providers": "Data Providers",
+  "data_provider_info_site": "View information on the website",
+  "source_code": "Open Source",
+  "go_to_repository": "Go to repository",
+  "chose_data_provider": "Chose data provider"
 }

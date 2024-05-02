@@ -10,6 +10,8 @@ import { translate } from '../../lib/i18n';
 import { ExchangeScreen } from './screens/exchange-screen';
 import { RatesScreen } from './screens/rates-screen';
 import { Touchable } from '../../components/core-ui/Touchable';
+import { useStyles } from 'react-native-unistyles';
+import { stylesheet } from './stylesheet';
 
 const renderScene = SceneMap({
   exchange: ExchangeScreen,
@@ -20,6 +22,7 @@ export const Explore = () => {
   const layout = useWindowDimensions();
   const { colors } = useTheme();
   const { navigate } = useNavigation();
+  const { styles } = useStyles(stylesheet);
 
   const [index, setIndex] = useState(0);
   const [routes] = useState<Route[]>([
@@ -28,10 +31,7 @@ export const Explore = () => {
   ]);
 
   const leftButton = () => (
-    <Touchable
-      onPress={() => navigate('settings')}
-      style={{ borderRadius: 999, padding: 5 }}
-    >
+    <Touchable onPress={() => navigate('settings')} style={styles.icon}>
       <SettingsIcon color={colors.text} height={20} width={20} />
     </Touchable>
   );

@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 13,
     flexGrow: 1,
+    paddingTop: 150,
   },
   scroll: {
-    paddingTop: 150,
     flex: 1,
   },
 });

@@ -20,7 +20,7 @@ export const Currencies = () => {
 
   const [index, setIndex] = useState(0);
   const [routes] = useState<Route[]>([
-    { key: 'CurrenciesPicker', title: translate('about'), height: 80 },
+    { key: 'CurrenciesPicker', title: translate('search'), height: 80 },
   ]);
 
   const leftButton = () => (
@@ -46,7 +46,7 @@ export const Currencies = () => {
       leftButton={leftButton}
       renderIcon={({ route, color }) => {
         if (route.key === 'CurrenciesPicker') {
-          return <AntDesign name="info" color={color} size={18} />;
+          return <AntDesign name="search1" color={color} size={18} />;
         }
         return null;
       }}

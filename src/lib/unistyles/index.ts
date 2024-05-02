@@ -21,6 +21,8 @@ const light = {
     text: '#1E1E1E',
     border: 'rgb(216, 216, 216)',
     fabBg: '#673AB7',
+    red: 'red',
+    green: 'green',
   },
 } as const;
 
@@ -44,6 +46,8 @@ const dark = {
     text: '#fcfcfc',
     border: 'rgb(39, 39, 41)',
     fabBg: '#ffffff',
+    red: 'red',
+    green: 'green',
   },
 } as const;
 

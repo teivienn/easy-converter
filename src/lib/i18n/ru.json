@@ -59,7 +59,11 @@
   "exchange": "Обмен",
   "rates": "Курсы",
   "about": "Инфо",
-  "data_provider": "Поставщик данных",
-  "data_provider_name": "ЦБ РФ",
-  "data_provider_info_site": "Посмотреть информацию на сайте"
+  "settings": "Настройки",
+  "search": "Поиск",
+  "data_providers": "Поставщики данных",
+  "data_provider_info_site": "Посмотреть информацию на сайте",
+  "source_code": "Открытый исходный код",
+  "go_to_repository": "Перейти в репозиторий",
+  "chose_data_provider": "Выбор поставщика данных"
 }
